@@ -30,8 +30,8 @@ MODLIBS=           $(LOCALMODLIBS) $(BASEMODLIBS)
 VERSION=	3.7
 srcdir=		.
 
-abs_srcdir=	/private/tmp/python-20190709-71298-1cfqdlu/Python-3.7.4
-abs_builddir=	/private/tmp/python-20190709-71298-1cfqdlu/Python-3.7.4
+abs_srcdir=	/private/tmp/python-20190212-23618-1mc8xz1/Python-3.7.2
+abs_builddir=	/private/tmp/python-20190212-23618-1mc8xz1/Python-3.7.2
 
 
 CC=		clang
@@ -107,8 +107,6 @@ NO_AS_NEEDED=
 LDLAST=		
 SGI_ABI=	@SGI_ABI@
 CCSHARED=	
-# LINKFORSHARED are the flags passed to the $(CC) command that links
-# the python executable -- this is only needed for a few systems
 LINKFORSHARED=	-Wl,-stack_size,1000000  -framework CoreFoundation $(PYTHONFRAMEWORKINSTALLDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)
 ARFLAGS=	rcs
 # Extra C flags added for building the interpreter object files.
@@ -188,7 +186,7 @@ LIPO_32BIT_FLAGS=
 OTHER_LIBTOOL_OPT=
 
 # Environment to run shared python without installed libraries
-RUNSHARED=       DYLD_FRAMEWORK_PATH=/private/tmp/python-20190709-71298-1cfqdlu/Python-3.7.4
+RUNSHARED=       DYLD_FRAMEWORK_PATH=/private/tmp/python-20190212-23618-1mc8xz1/Python-3.7.2
 
 # ensurepip options
 ENSUREPIP=      no
@@ -209,7 +207,7 @@ CONFIG_ARGS=	 '--prefix=/usr/local/opt/python' '--enable-ipv6' '--datarootdir=/u
 
 
 # Subdirectories with code
-SRCDIRS= 	Parser Objects Python Modules Modules/_io Programs
+SRCDIRS= 	Parser Objects Python Modules Programs
 
 # Other subdirectories
 SUBDIRSTOO=	Include Lib Misc
@@ -249,8 +247,8 @@ PYTHON_FOR_REGEN=python
 UPDATE_FILE=python $(srcdir)/Tools/scripts/update_file.py
 PYTHON_FOR_BUILD=./$(BUILDPYTHON) -E
 _PYTHON_HOST_PLATFORM=
-BUILD_GNU_TYPE=	x86_64-apple-darwin18.6.0
-HOST_GNU_TYPE=	x86_64-apple-darwin18.6.0
+BUILD_GNU_TYPE=	x86_64-apple-darwin18.2.0
+HOST_GNU_TYPE=	x86_64-apple-darwin18.2.0
 
 # Tcl and Tk config info from --with-tcltk-includes and -libs options
 TCLTK_INCLUDES=	

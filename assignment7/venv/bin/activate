@@ -2,7 +2,7 @@
 # you cannot run it directly
 
 
-if [ "${BASH_SOURCE-}" = "$0" ]; then
+if [[ "${BASH_SOURCE-}" = "$0" ]]; then
     echo "You must source this script: \$ source $0" >&2
     exit 33
 fi
@@ -46,7 +46,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/kiattisakpetchmark/Kamonwan/information-security/CED59-5902041620024/assignment5/venv"
+VIRTUAL_ENV="/Users/computereducation/InformationSecurity/s5902041610045/CED59-5902041610045/CED59-5902041610045/assignment7/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

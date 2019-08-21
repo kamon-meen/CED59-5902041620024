@@ -1,4 +1,4 @@
-#!/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/bin/python3.7m
+#!/usr/local/Cellar/python/3.7.2_2/Frameworks/Python.framework/Versions/3.7/bin/python3.7m
 # -*- python -*-
 
 # Keep this script in sync with python-config.sh.in
@@ -55,6 +55,8 @@ for opt in opt_flags:
         if opt == '--ldflags':
             if not getvar('Py_ENABLE_SHARED'):
                 libs.insert(0, '-L' + getvar('LIBPL'))
+            if not getvar('PYTHONFRAMEWORK'):
+                libs.extend(getvar('LINKFORSHARED').split())
         print(' '.join(libs))
 
     elif opt == '--extension-suffix':

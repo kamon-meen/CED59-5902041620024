@@ -838,7 +838,7 @@ class StreamRecoder:
 
     def writelines(self, list):
 
-        data = b''.join(list)
+        data = ''.join(list)
         data, bytesdecoded = self.decode(data, self.errors)
         return self.writer.write(data)
 
@@ -846,12 +846,6 @@ class StreamRecoder:
 
         self.reader.reset()
         self.writer.reset()
-
-    def seek(self, offset, whence=0):
-        # Seeks must be propagated to both the readers and writers
-        # as they might need to reset their internal buffers.
-        self.reader.seek(offset, whence)
-        self.writer.seek(offset, whence)
 
     def __getattr__(self, name,
                     getattr=getattr):

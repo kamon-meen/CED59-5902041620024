@@ -144,9 +144,6 @@
 /* Define to 1 if you have the <crypt.h> header file. */
 /* #undef HAVE_CRYPT_H */
 
-/* Define if you have the crypt_r() function. */
-/* #undef HAVE_CRYPT_R */
-
 /* Define to 1 if you have the `ctermid' function. */
 #define HAVE_CTERMID 1
 
