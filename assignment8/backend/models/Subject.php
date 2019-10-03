@@ -7,9 +7,9 @@ class Subject extends \common\models\Subject
 {
     public function behaviors()
     {
-        return[
-            TimestampBehavior::class,
-            BlameableBehavior::class
+        return [
+            ['name', 'required', 'message' => 'please insert data'],
+            ['name', 'email', 'message' => 'please insert type example@email.com']
         ];
     }
 }
