@@ -3,9 +3,9 @@
 use yii\db\Migration;
 
 /**
- * Class m190926_073328_update_subject_table
+ * Class m190926_091852_update_subject_table
  */
-class m190926_073328_update_subject_table extends Migration
+class m190926_091852_update_subject_table extends Migration
 {
     /**
      * {@inheritdoc}
@@ -23,8 +23,8 @@ class m190926_073328_update_subject_table extends Migration
      */
     public function safeDown()
     {
-        echo "m190926_073328_update_subject_table cannot be reverted.\n";
-        
+        echo "m190926_091852_update_subject_table cannot be reverted.\n";
+
         return false;
     }
 
@@ -37,7 +37,7 @@ class m190926_073328_update_subject_table extends Migration
 
     public function down()
     {
-        echo "m190926_073328_update_subject_table cannot be reverted.\n";
+        echo "m190926_091852_update_subject_table cannot be reverted.\n";
 
         return false;
     }
